@@ -350,7 +350,7 @@ def sum_unit_fractions_from(m, n):
     # -------------------------------------------------------------------------
     total = 0
     for k in range((n + 1) - m):
-        total = total + (1//k)
+        total = total + (1 // k)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
