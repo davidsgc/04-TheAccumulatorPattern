@@ -130,16 +130,16 @@ def run_test_draw_circles_from_rectangle():
 
     #Test 1:
     rectangle = rg.Rectangle(rg.Point(100,100), rg.Point(150, 200))
-    rectangle.fill_color('green')
-    rectangle.outline_thickness(5)
-    rectangle.outline_color('black')
+    rectangle.fill_color = 'green'
+    rectangle.outline_thickness = 5
+    rectangle.outline_color = 'black'
     draw_circles_from_rectangle(4, 5, rectangle, window3)
 
     # Test 2:
     rectangle = rg.Rectangle(rg.Point(400, 250), rg.Point(440, 325))
-    rectangle.fill_color('blue')
-    rectangle.outline_thickness(3)
-    rectangle.outline_color('red')
+    rectangle.fill_color = 'blue'
+    rectangle.outline_thickness = 3
+    rectangle.outline_color = 'red'
     draw_circles_from_rectangle(8, 3, rectangle, window3)
 
     window3.close_on_mouse_click()
@@ -148,9 +148,9 @@ def run_test_draw_circles_from_rectangle():
 
     # Test 3:
     rectangle = rg.Rectangle(rg.Point(600, 400), rg.Point(500, 450))
-    rectangle.fill_color('yellow')
-    rectangle.outline_thickness(5)
-    rectangle.outline_color('brown')
+    rectangle.fill_color = 'yellow'
+    rectangle.outline_thickness = 5
+    rectangle.outline_color = 'brown'
     draw_circles_from_rectangle(6, 10, rectangle, window4)
 
     window4.close_on_mouse_click()
@@ -228,14 +228,14 @@ def draw_circles_from_rectangle(m, n, rectangle, window):
     fill = rectangle.fill_color
     outline = rectangle.outline_color
     for k in range(m):
-        center = rg.Point(rectangle.get_upper_left_corner().x - ((height // 2) * k), rectangle.get_upper_left_corner().y - (height // 2))
-        circle = rg.Circle(center, (height // 2))
+        center = rg.Point(rectangle.get_upper_left_corner().x - ((height / 2) * k), rectangle.get_upper_left_corner().y - (height / 2))
+        circle = rg.Circle(center, (height / 2))
         circle.fill_color = fill
         circle.attach_to(window)
 
     for k in range(n):
-        center = rg.Point(rectangle.get_upper_left_corner().x + (width // 2), rectangle.get_upper_left_corner().y + (width // 2))
-        circle = rg.Circle(center, (width // 2))
+        center = rg.Point(rectangle.get_upper_left_corner().x + (width / 2), rectangle.get_upper_left_corner().y + (width / 2))
+        circle = rg.Circle(center, (width / 2))
         circle.outline_color = outline
         circle.attach_to(window)
 
